@@ -1,0 +1,17 @@
+*.class
+
+.settings
+
+# Package Files #
+*.jar
+*.war
+
+# caches and compiled units #
+target
+generated-sources/
+
+# boilerplate generated classes #
+.apt_generated/
+
+**/logs
+*.log
