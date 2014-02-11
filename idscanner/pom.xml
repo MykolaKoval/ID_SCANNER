@@ -43,6 +43,28 @@
       <version>3.0.1</version>
     </dependency>
 
+    <!-- DB -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.25</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+      <version>4.2.1.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate.javax.persistence</groupId>
+      <artifactId>hibernate-jpa-2.0-api</artifactId>
+      <version>1.0.1.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hsqldb</groupId>
+      <artifactId>hsqldb</artifactId>
+      <version>2.2.8</version>
+    </dependency>
+      
     <!-- DI -->
     <dependency>
       <groupId>com.google.inject</groupId>
@@ -54,7 +76,12 @@
       <artifactId>guice-servlet</artifactId>
       <version>${guice.version}</version>
     </dependency>
-
+    <dependency>
+      <groupId>com.google.inject.extensions</groupId>
+	  <artifactId>guice-persist</artifactId>
+	  <version>${guice.version}</version>
+    </dependency>
+      
     <!-- Logging -->
     <dependency>
       <groupId>org.slf4j</groupId>

@@ -1,5 +1,6 @@
 <%@ page import="com.google.inject.Injector"%>
-<%@ page import="org.kdev.idscanner.service.ImageResource"%>
+<%@ page import="org.kdev.idscanner.service.PersonService"%>
+<%@ page import="org.kdev.idscanner.domain.entity.Person"%>
 <html>
   
   <head>
@@ -11,22 +12,21 @@
   <body>
     <%
       Injector inj = (Injector) pageContext.getServletContext().getAttribute(Injector.class.getName());
-      ImageResource imgResource = inj.getInstance(ImageResource.class);
-      String img = imgResource.getImage(request.getParameter("id"));
-      boolean isCountryDirector = false; 
+      PersonService personService = inj.getInstance(PersonService.class);
+      Person person = personService.getPerson(request.getParameter("id"));
     %>
 
-    <div style="position:relative; width:100%; height:100%; <%if(isCountryDirector){%>background-color:orange;<%}%>" >
+    <div style="position:relative; width:100%; height:100%; <%if(person.isDirector()){%>background-color:orange;<%}%>" >
       <div class="image-person">
-        <img src="data:image/png;base64,<%=img%>" height="100%"/>
+        <img src="data:image/png;base64,<%=person.getImg()%>" height="100%"/>
       </div>
       <div class="text-person">
         <table>
           <tr>
-            <td><b>Country:</b> </td><td>Ukraine</td>
+            <td><b>Country:</b> </td><td><%=person.getCountry()%></td>
           </tr>
           <tr>
-            <td><b>Name:</b> </td><td>Mykola Koval</td>
+            <td><b>Name:</b> </td><td><%=person.getName()%> <%=person.getSurname()%></td>
           </tr>
         </table>
       </div>
