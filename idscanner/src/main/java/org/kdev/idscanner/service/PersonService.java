@@ -4,5 +4,7 @@ import org.kdev.idscanner.domain.entity.Person;
 
 public interface PersonService {
 
-	Person getPerson(String code);
+	Person get(String code);
+	
+	void add(Person person);
 }

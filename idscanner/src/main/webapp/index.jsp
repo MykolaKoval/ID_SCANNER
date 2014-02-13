@@ -11,9 +11,9 @@
 
   <body>
     <%
-      Injector inj = (Injector) pageContext.getServletContext().getAttribute(Injector.class.getName());
-      PersonService personService = inj.getInstance(PersonService.class);
-      Person person = personService.getPerson(request.getParameter("id"));
+      Injector injector = (Injector) pageContext.getServletContext().getAttribute(Injector.class.getName());
+      PersonService personService = injector.getInstance(PersonService.class);
+      Person person = personService.get(request.getParameter("id"));
     %>
 
     <div style="position:relative; width:100%; height:100%; <%if(person.isDirector()){%>background-color:orange;<%}%>" >

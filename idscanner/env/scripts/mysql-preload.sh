@@ -1,3 +1,3 @@
 #!/bin/bash
 
-mysql --user=vserver --password=vserver < mysql-preload.sql
+mysql --user=idscanner --password=idscanner < mysql-preload.sql
