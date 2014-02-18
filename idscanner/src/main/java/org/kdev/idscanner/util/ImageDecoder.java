@@ -26,7 +26,7 @@ public class ImageDecoder {
 		ByteArrayOutputStream bos = new ByteArrayOutputStream();
 
 		try {
-			ImageIO.write(bufImage, "png", bos);
+			ImageIO.write(bufImage, "jpg", bos);
 			byte buffer[] = bos.toByteArray();
 			return Base64.encodeBase64String(buffer);
 		} catch (IOException e) {

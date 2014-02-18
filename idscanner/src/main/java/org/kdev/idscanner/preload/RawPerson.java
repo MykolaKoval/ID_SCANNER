@@ -21,6 +21,7 @@ public class RawPerson {
 	@CsvField(pos = 5)
     private String imgName;
 	
+	@CsvField(pos = 6)
 	private String code;
 	
 	public String getCountry() {

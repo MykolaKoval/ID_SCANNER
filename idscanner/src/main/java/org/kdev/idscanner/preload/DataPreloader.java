@@ -24,7 +24,7 @@ import com.google.inject.persist.jpa.JpaPersistModule;
 
 public class DataPreloader {
 
-	private static final String IMG_DIR = "/home/projects/ID_SCANNER/idscanner/src/test/resources";
+	private static final String IMG_DIR = "/home/NA/PHOTOS";
 	private final List<String> codes = Lists.newArrayList();
 	
 	public static void main(String[] args) {
@@ -75,7 +75,7 @@ public class DataPreloader {
 		final List<RawPerson> result = Lists.newArrayList();
 		while (deserializer.hasNext()) {
 			final RawPerson person = deserializer.next();
-			person.setCode(generateCode());
+			//person.setCode(generateCode());
 			result.add(person);
 			print(person);
 		}
@@ -100,6 +100,7 @@ public class DataPreloader {
 		System.out.println("Surname: " + person.getSurname());
 		System.out.println("Director: " + person.getDirector());
 		System.out.println("Image: " + person.getImgName());
+		System.out.println("Code: " + person.getCode());
 	}
 
 	private Reader createFileReader() {
