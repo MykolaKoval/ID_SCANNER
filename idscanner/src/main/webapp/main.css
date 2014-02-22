@@ -12,6 +12,8 @@ td {
 }
 
 .image-person {
+	height: 100%;
+	width: 100%;
 	float: left;
 	z-index: 1;
 }
