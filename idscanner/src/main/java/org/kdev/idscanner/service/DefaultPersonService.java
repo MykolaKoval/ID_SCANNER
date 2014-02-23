@@ -1,5 +1,7 @@
 package org.kdev.idscanner.service;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.persistence.NoResultException;
 
@@ -25,6 +27,11 @@ public class DefaultPersonService implements PersonService {
 		}
 	}
 
+	@Override
+	public List<Person> getAll() {
+		return personDao.findAll();
+	}
+	
 	@Override
 	public void add(final Person person) {
 		personDao.insert(person);

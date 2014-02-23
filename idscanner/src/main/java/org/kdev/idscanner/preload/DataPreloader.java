@@ -95,7 +95,6 @@ public class DataPreloader {
 	private void print(final RawPerson person) {
 		System.out.println("---------------------------");
 		System.out.println("Country: " + person.getCountry());
-		System.out.println("Code: " + person.getCode());
 		System.out.println("Name: " + person.getName());
 		System.out.println("Surname: " + person.getSurname());
 		System.out.println("Director: " + person.getDirector());
