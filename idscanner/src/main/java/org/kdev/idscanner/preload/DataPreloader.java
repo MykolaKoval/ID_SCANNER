@@ -26,7 +26,7 @@ public class DataPreloader {
 
 	private static final String IMG_DIR = "/home/NA/PHOTOS";
 	private final List<String> codes = Lists.newArrayList();
-	
+
 	public static void main(String[] args) {
 		final List<RawPerson> persons = new DataPreloader().preload();
 
@@ -75,7 +75,11 @@ public class DataPreloader {
 		final List<RawPerson> result = Lists.newArrayList();
 		while (deserializer.hasNext()) {
 			final RawPerson person = deserializer.next();
-			//person.setCode(generateCode());
+//			if (StringUtils.isEmpty(person.getCode())) {
+//				person.setCode(generateCode());
+//			} else {
+//				codes.add(person.getCode());
+//			}
 			result.add(person);
 			print(person);
 		}
