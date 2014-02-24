@@ -11,6 +11,7 @@
     <guice.version>3.0</guice.version>
     <slf4j.version>1.7.5</slf4j.version>
     <logback.version>1.0.13</logback.version>
+    <jersey.version>1.18</jersey.version>
   </properties>
   
   <build>
@@ -41,6 +42,12 @@
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>3.0.1</version>
+    </dependency>
+    
+    <dependency>
+	  <groupId>com.sun.jersey</groupId>
+	  <artifactId>jersey-client</artifactId>
+	  <version>${jersey.version}</version>
     </dependency>
 
     <!-- DB -->
