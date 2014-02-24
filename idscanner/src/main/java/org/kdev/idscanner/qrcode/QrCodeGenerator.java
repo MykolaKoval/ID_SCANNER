@@ -26,7 +26,7 @@ import com.sun.jersey.core.util.MultivaluedMapImpl;
 public class QrCodeGenerator {
 
 	private static final String BASE_URL = "http://192.168.2.1:8080/idscanner/index.jsp?id=";
-	private static final String IMAGES_DIR = "D:/temp/images";
+	private static final String IMAGES_DIR = "/home/NA/QR_CODES";
 	
 	private static WebResource resource;
 
