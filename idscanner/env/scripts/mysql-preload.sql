@@ -10,9 +10,9 @@ CREATE TABLE persons (
 	surname VARCHAR(32) NULL DEFAULT NULL,
 	country VARCHAR(32) NULL DEFAULT NULL,
 	is_director TINYINT(1) NULL DEFAULT NULL,
-	image_blob LONGTEXT NULL DEFAULT NULL,
+	img_blob LONGTEXT NULL DEFAULT NULL,
 	PRIMARY KEY (id)
 );
 
 -- preload configuration data
-INSERT INTO persons(code, name, surname, country) VALUES ('JJGG', 'John', 'Smith', 'USA');
+-- INSERT INTO persons(code, name, surname, country) VALUES ('JJGG', 'John', 'Smith', 'USA');

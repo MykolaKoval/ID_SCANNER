@@ -18,6 +18,11 @@
     <listener-class>org.kdev.idscanner.injector.AppConfig</listener-class>
   </listener>
   
+  <error-page>
+	<exception-type>org.kdev.idscanner.service.PersonNotFoundException</exception-type>
+	<location>/notFound.jsp</location>
+  </error-page>
+	
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
